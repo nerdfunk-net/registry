@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1761747572484,
+    "description" : "Write data to destination",
+    "identifier" : "Write-to-Destination",
+    "lastModifiedTimestamp" : 1761747572484,
+    "name" : "Write-to-Destination",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
