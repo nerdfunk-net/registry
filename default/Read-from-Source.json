@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1761747479462,
+    "description" : "Read data from Source",
+    "identifier" : "Read-from-Source",
+    "lastModifiedTimestamp" : 1761747479462,
+    "name" : "Read-from-Source",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
