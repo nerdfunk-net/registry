@@ -128,7 +128,7 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "CN=MacBook-Air-von-Marc.local, OU=IT Department, O=private, ST=Bayern, C=DE",
+    "author" : "nerdfunk",
     "flowIdentifier" : "standarddistributor",
     "timestamp" : 1762105914482
   }
