@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1762105824962,
+    "description" : "Standard Distrubution Template",
+    "identifier" : "standarddistribution",
+    "lastModifiedTimestamp" : 1762105824962,
+    "name" : "standard_distribution",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
