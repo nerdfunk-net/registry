@@ -97,7 +97,7 @@
         "x" : -728.0,
         "y" : -272.0
       },
-      "scheduledState" : "DISABLED",
+      "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
     } ],
     "position" : {
@@ -133,7 +133,7 @@
         "canonical-value-lookup-cache-size" : "100",
         "datenschleuder_cn" : "#{datenschleuder_cn}",
         "datenschleuder_ou" : "#{datenschleuder_ou}",
-        "datenschleuder_o" : "#{datenschleuder_do}"
+        "datenschleuder_o" : "#{datenschleuder_o}"
       },
       "propertyDescriptors" : {
         "Delete Attributes Expression" : {
@@ -285,7 +285,7 @@
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 0,
-      "scheduledState" : "DISABLED",
+      "scheduledState" : "ENABLED",
       "schedulingPeriod" : "1 min",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
@@ -303,6 +303,6 @@
   "snapshotMetadata" : {
     "author" : "CN=MacBook-Air-von-Marc.local, OU=IT Department, O=private, ST=Bayern, C=DE",
     "flowIdentifier" : "Read-from-Source",
-    "timestamp" : 1762537499846
+    "timestamp" : 1762537677042
   }
 }
