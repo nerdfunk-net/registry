@@ -24,7 +24,7 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "b6fbfdf6-6d9b-3cd7-97bf-f11a7dcee772",
+      "identifier" : "a2bdc013-69c9-3fda-a39a-14ed003a5232",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -35,8 +35,8 @@
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "b40ceec1-7a71-386c-9640-da6843417d69",
-        "name" : "LogMessage",
+        "id" : "b16e4271-cd34-3996-9e7b-b2a756fb8456",
+        "name" : "UpdateAttribute",
         "type" : "PROCESSOR"
       },
       "zIndex" : 2
@@ -48,13 +48,13 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "b40ceec1-7a71-386c-9640-da6843417d69",
-        "name" : "LogMessage",
+        "id" : "b16e4271-cd34-3996-9e7b-b2a756fb8456",
+        "name" : "UpdateAttribute",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "bde9a5ff-b648-3db5-8ea8-7e51c7b6444a",
+      "identifier" : "dc56f9bf-cbf4-3944-99a0-8bebf277131f",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -97,7 +97,7 @@
         "x" : -728.0,
         "y" : -272.0
       },
-      "scheduledState" : "ENABLED",
+      "scheduledState" : "DISABLED",
       "type" : "OUTPUT_PORT"
     } ],
     "position" : {
@@ -110,7 +110,7 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
-        "artifact" : "nifi-standard-nar",
+        "artifact" : "nifi-update-attribute-nar",
         "group" : "org.apache.nifi",
         "version" : "2.6.0"
       },
@@ -119,37 +119,77 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "b40ceec1-7a71-386c-9640-da6843417d69",
+      "identifier" : "b16e4271-cd34-3996-9e7b-b2a756fb8456",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "LogMessage",
+      "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -784.0,
-        "y" : -504.0
+        "y" : -512.0
       },
       "properties" : {
-        "log-level" : "info"
+        "datenschleuder_dc" : "#{datenschleuder_dc}",
+        "Store State" : "Do not store state",
+        "canonical-value-lookup-cache-size" : "100",
+        "datenschleuder_cn" : "#{datenschleuder_cn}",
+        "datenschleuder_ou" : "#{datenschleuder_ou}",
+        "datenschleuder_o" : "#{datenschleuder_do}"
       },
       "propertyDescriptors" : {
-        "log-message" : {
-          "displayName" : "Log message",
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "log-message",
+          "name" : "Delete Attributes Expression",
           "sensitive" : false
         },
-        "log-level" : {
-          "displayName" : "Log Level",
-          "dynamic" : false,
+        "datenschleuder_dc" : {
+          "displayName" : "datenschleuder_dc",
+          "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "log-level",
+          "name" : "datenschleuder_dc",
           "sensitive" : false
         },
-        "log-prefix" : {
-          "displayName" : "Log prefix",
+        "Store State" : {
+          "displayName" : "Store State",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "log-prefix",
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "canonical-value-lookup-cache-size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "canonical-value-lookup-cache-size",
+          "sensitive" : false
+        },
+        "datenschleuder_cn" : {
+          "displayName" : "datenschleuder_cn",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "datenschleuder_cn",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        },
+        "datenschleuder_ou" : {
+          "displayName" : "datenschleuder_ou",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "datenschleuder_ou",
+          "sensitive" : false
+        },
+        "datenschleuder_o" : {
+          "displayName" : "datenschleuder_o",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "datenschleuder_o",
           "sensitive" : false
         }
       },
@@ -160,7 +200,7 @@
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
-      "type" : "org.apache.nifi.processors.standard.LogMessage",
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -245,7 +285,7 @@
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
+      "scheduledState" : "DISABLED",
       "schedulingPeriod" : "1 min",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
@@ -261,8 +301,8 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "7599f663-82d5-4809-b9ba-7aaf0a1b9c85",
+    "author" : "CN=MacBook-Air-von-Marc.local, OU=IT Department, O=private, ST=Bayern, C=DE",
     "flowIdentifier" : "Read-from-Source",
-    "timestamp" : 1761747481810
+    "timestamp" : 1762537499846
   }
 }
