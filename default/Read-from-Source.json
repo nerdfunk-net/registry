@@ -128,26 +128,37 @@
         "y" : -512.0
       },
       "properties" : {
-        "datenschleuder_dc" : "#{datenschleuder_dc}",
+        "dest_datenschleuder_dc" : "#{dest_datenschleuder_dc}",
+        "src_datenschleuder_cn" : "#{src_datenschleuder_cn}",
         "Store State" : "Do not store state",
         "canonical-value-lookup-cache-size" : "100",
-        "datenschleuder_cn" : "#{datenschleuder_cn}",
-        "datenschleuder_ou" : "#{datenschleuder_ou}",
-        "datenschleuder_o" : "#{datenschleuder_o}"
+        "dest_datenschleuder_cn" : "#{dest_datenschleuder_cn}",
+        "src_datenschleuder_dc" : "#{src_datenschleuder_dc}",
+        "dest_datenschleuder_o" : "#{dest_datenschleuder_o}",
+        "src_datenschleuder_ou" : "#{src_datenschleuder_ou}",
+        "src_datenschleuder_o" : "#{src_datenschleuder_o}",
+        "dest_datenschleuder_ou" : "#{dest_datenschleuder_ou}"
       },
       "propertyDescriptors" : {
+        "dest_datenschleuder_dc" : {
+          "displayName" : "dest_datenschleuder_dc",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "dest_datenschleuder_dc",
+          "sensitive" : false
+        },
+        "src_datenschleuder_cn" : {
+          "displayName" : "src_datenschleuder_cn",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "src_datenschleuder_cn",
+          "sensitive" : false
+        },
         "Delete Attributes Expression" : {
           "displayName" : "Delete Attributes Expression",
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "Delete Attributes Expression",
-          "sensitive" : false
-        },
-        "datenschleuder_dc" : {
-          "displayName" : "datenschleuder_dc",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "datenschleuder_dc",
           "sensitive" : false
         },
         "Store State" : {
@@ -164,11 +175,18 @@
           "name" : "canonical-value-lookup-cache-size",
           "sensitive" : false
         },
-        "datenschleuder_cn" : {
-          "displayName" : "datenschleuder_cn",
+        "dest_datenschleuder_cn" : {
+          "displayName" : "dest_datenschleuder_cn",
           "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "datenschleuder_cn",
+          "name" : "dest_datenschleuder_cn",
+          "sensitive" : false
+        },
+        "src_datenschleuder_dc" : {
+          "displayName" : "src_datenschleuder_dc",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "src_datenschleuder_dc",
           "sensitive" : false
         },
         "Stateful Variables Initial Value" : {
@@ -178,18 +196,32 @@
           "name" : "Stateful Variables Initial Value",
           "sensitive" : false
         },
-        "datenschleuder_ou" : {
-          "displayName" : "datenschleuder_ou",
+        "dest_datenschleuder_o" : {
+          "displayName" : "dest_datenschleuder_o",
           "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "datenschleuder_ou",
+          "name" : "dest_datenschleuder_o",
           "sensitive" : false
         },
-        "datenschleuder_o" : {
-          "displayName" : "datenschleuder_o",
+        "src_datenschleuder_ou" : {
+          "displayName" : "src_datenschleuder_ou",
           "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "datenschleuder_o",
+          "name" : "src_datenschleuder_ou",
+          "sensitive" : false
+        },
+        "src_datenschleuder_o" : {
+          "displayName" : "src_datenschleuder_o",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "src_datenschleuder_o",
+          "sensitive" : false
+        },
+        "dest_datenschleuder_ou" : {
+          "displayName" : "dest_datenschleuder_ou",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "dest_datenschleuder_ou",
           "sensitive" : false
         }
       },
@@ -303,6 +335,6 @@
   "snapshotMetadata" : {
     "author" : "CN=MacBook-Air-von-Marc.local, OU=IT Department, O=private, ST=Bayern, C=DE",
     "flowIdentifier" : "Read-from-Source",
-    "timestamp" : 1762537677042
+    "timestamp" : 1763829480512
   }
 }
