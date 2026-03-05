@@ -63,7 +63,7 @@
         "x" : -2968.0,
         "y" : -1824.0
       },
-      "scheduledState" : "ENABLED",
+      "scheduledState" : "DISABLED",
       "type" : "INPUT_PORT"
     } ],
     "labels" : [ ],
@@ -82,7 +82,7 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2.6.0"
+        "version" : "2.8.0"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -98,35 +98,35 @@
         "y" : -1680.0
       },
       "properties" : {
-        "log-level" : "info"
+        "Log Level" : "info"
       },
       "propertyDescriptors" : {
-        "log-message" : {
-          "displayName" : "Log message",
+        "Log Message" : {
+          "displayName" : "Log Message",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "log-message",
+          "name" : "Log Message",
           "sensitive" : false
         },
-        "log-level" : {
+        "Log Level" : {
           "displayName" : "Log Level",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "log-level",
+          "name" : "Log Level",
           "sensitive" : false
         },
-        "log-prefix" : {
-          "displayName" : "Log prefix",
+        "Log Prefix" : {
+          "displayName" : "Log Prefix",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "log-prefix",
+          "name" : "Log Prefix",
           "sensitive" : false
         }
       },
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
+      "scheduledState" : "DISABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
@@ -142,8 +142,8 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "7599f663-82d5-4809-b9ba-7aaf0a1b9c85",
+    "author" : "CN=MacBook-Air-von-Marc.local, OU=IT Department, O=Private, ST=Berlin, C=DE",
     "flowIdentifier" : "Write-to-Destination",
-    "timestamp" : 1761747573710
+    "timestamp" : 1772714486726
   }
 }
