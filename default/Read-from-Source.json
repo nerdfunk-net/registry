@@ -97,7 +97,7 @@
         "x" : -728.0,
         "y" : -272.0
       },
-      "scheduledState" : "ENABLED",
+      "scheduledState" : "DISABLED",
       "type" : "OUTPUT_PORT"
     } ],
     "position" : {
@@ -112,7 +112,7 @@
       "bundle" : {
         "artifact" : "nifi-update-attribute-nar",
         "group" : "org.apache.nifi",
-        "version" : "2.6.0"
+        "version" : "2.8.0"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -128,18 +128,25 @@
         "y" : -512.0
       },
       "properties" : {
+        "src_datenschleuder_department" : "#{src_datenschleuder_department}",
         "dest_datenschleuder_dc" : "#{dest_datenschleuder_dc}",
         "src_datenschleuder_cn" : "#{src_datenschleuder_cn}",
         "Store State" : "Do not store state",
-        "canonical-value-lookup-cache-size" : "100",
         "dest_datenschleuder_cn" : "#{dest_datenschleuder_cn}",
         "src_datenschleuder_dc" : "#{src_datenschleuder_dc}",
-        "dest_datenschleuder_o" : "#{dest_datenschleuder_o}",
+        "dest_datenschleuder_department" : "#{dest_datenschleuder_department}",
+        "Cache Value Lookup Cache Size" : "100",
         "src_datenschleuder_ou" : "#{src_datenschleuder_ou}",
-        "src_datenschleuder_o" : "#{src_datenschleuder_o}",
         "dest_datenschleuder_ou" : "#{dest_datenschleuder_ou}"
       },
       "propertyDescriptors" : {
+        "src_datenschleuder_department" : {
+          "displayName" : "src_datenschleuder_department",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "src_datenschleuder_department",
+          "sensitive" : false
+        },
         "dest_datenschleuder_dc" : {
           "displayName" : "dest_datenschleuder_dc",
           "dynamic" : true,
@@ -168,13 +175,6 @@
           "name" : "Store State",
           "sensitive" : false
         },
-        "canonical-value-lookup-cache-size" : {
-          "displayName" : "Cache Value Lookup Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "canonical-value-lookup-cache-size",
-          "sensitive" : false
-        },
         "dest_datenschleuder_cn" : {
           "displayName" : "dest_datenschleuder_cn",
           "dynamic" : true,
@@ -189,6 +189,20 @@
           "name" : "src_datenschleuder_dc",
           "sensitive" : false
         },
+        "dest_datenschleuder_department" : {
+          "displayName" : "dest_datenschleuder_department",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "dest_datenschleuder_department",
+          "sensitive" : false
+        },
+        "Cache Value Lookup Cache Size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Cache Value Lookup Cache Size",
+          "sensitive" : false
+        },
         "Stateful Variables Initial Value" : {
           "displayName" : "Stateful Variables Initial Value",
           "dynamic" : false,
@@ -196,25 +210,11 @@
           "name" : "Stateful Variables Initial Value",
           "sensitive" : false
         },
-        "dest_datenschleuder_o" : {
-          "displayName" : "dest_datenschleuder_o",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "dest_datenschleuder_o",
-          "sensitive" : false
-        },
         "src_datenschleuder_ou" : {
           "displayName" : "src_datenschleuder_ou",
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "src_datenschleuder_ou",
-          "sensitive" : false
-        },
-        "src_datenschleuder_o" : {
-          "displayName" : "src_datenschleuder_o",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "src_datenschleuder_o",
           "sensitive" : false
         },
         "dest_datenschleuder_ou" : {
@@ -228,7 +228,7 @@
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
+      "scheduledState" : "DISABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
@@ -241,7 +241,7 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2.6.0"
+        "version" : "2.8.0"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -257,39 +257,18 @@
         "y" : -720.0
       },
       "properties" : {
-        "character-set" : "UTF-8",
         "File Size" : "0B",
         "Batch Size" : "1",
         "Unique FlowFiles" : "false",
+        "Character Set" : "UTF-8",
         "Data Format" : "Text"
       },
       "propertyDescriptors" : {
-        "character-set" : {
-          "displayName" : "Character Set",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "character-set",
-          "sensitive" : false
-        },
         "File Size" : {
           "displayName" : "File Size",
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "File Size",
-          "sensitive" : false
-        },
-        "mime-type" : {
-          "displayName" : "Mime Type",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "mime-type",
-          "sensitive" : false
-        },
-        "generate-ff-custom-text" : {
-          "displayName" : "Custom Text",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "generate-ff-custom-text",
           "sensitive" : false
         },
         "Batch Size" : {
@@ -306,6 +285,27 @@
           "name" : "Unique FlowFiles",
           "sensitive" : false
         },
+        "Mime Type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Mime Type",
+          "sensitive" : false
+        },
+        "Custom Text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Text",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
         "Data Format" : {
           "displayName" : "Data Format",
           "dynamic" : false,
@@ -317,7 +317,7 @@
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
+      "scheduledState" : "DISABLED",
       "schedulingPeriod" : "1 min",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
@@ -333,8 +333,8 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "CN=MacBook-Air-von-Marc.local, OU=IT Department, O=private, ST=Bayern, C=DE",
+    "author" : "CN=MacBook-Air-von-Marc.local, OU=IT Department, O=Private, ST=Berlin, C=DE",
     "flowIdentifier" : "Read-from-Source",
-    "timestamp" : 1763829480512
+    "timestamp" : 1772714460752
   }
 }
