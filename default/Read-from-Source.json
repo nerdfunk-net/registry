@@ -97,7 +97,7 @@
         "x" : -728.0,
         "y" : -272.0
       },
-      "scheduledState" : "DISABLED",
+      "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
     } ],
     "position" : {
@@ -228,7 +228,7 @@
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 25,
-      "scheduledState" : "DISABLED",
+      "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
@@ -317,7 +317,7 @@
       "retriedRelationships" : [ ],
       "retryCount" : 10,
       "runDurationMillis" : 0,
-      "scheduledState" : "DISABLED",
+      "scheduledState" : "ENABLED",
       "schedulingPeriod" : "1 min",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
@@ -335,6 +335,6 @@
   "snapshotMetadata" : {
     "author" : "CN=MacBook-Air-von-Marc.local, OU=IT Department, O=Private, ST=Berlin, C=DE",
     "flowIdentifier" : "Read-from-Source",
-    "timestamp" : 1772714460752
+    "timestamp" : 1772989844959
   }
 }
